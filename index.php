@@ -23,7 +23,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     $oldPassword = "hzy";
     $newPassword = "33";
     $newPasswordAgain = "33";*/ //debug
-    if(true)//$username && $oldPassword && $newPassword && $newPasswordAgain)
+    if($username && $oldPassword && $newPassword && $newPasswordAgain && 
+    	strlen($username)<16 && strlen($oldPassword)<16 && 
+    	strlen($newPassword)<16 && strlen($newPasswordAgain)<16)
     {
         if($newPassword == $newPasswordAgain)
         {
